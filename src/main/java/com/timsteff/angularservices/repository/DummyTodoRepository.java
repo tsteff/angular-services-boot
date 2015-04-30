@@ -9,13 +9,13 @@ public class DummyTodoRepository implements TodoRepository{
 
     private List<Todo> todoList = new ArrayList<Todo>();
 
-    public DummyTodoRepository() {
-        todoList.add(new Todo("test 1"));
-        todoList.add(new Todo("test 2"));
-    }
-
     @Override
     public List<Todo> getAll() {
         return todoList;
+    }
+
+    @Override
+    public void save(Todo todo) {
+        todoList.add(todo);
     }
 }
