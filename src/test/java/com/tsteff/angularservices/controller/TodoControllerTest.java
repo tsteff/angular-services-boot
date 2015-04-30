@@ -1,9 +1,8 @@
-package com.timsteff.angularservices.controller;
+package com.tsteff.angularservices.controller;
 
+import com.tsteff.angularservices.repository.TodoRepository;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.timsteff.angularservices.repository.TodoRepository;
 
 import static org.mockito.Mockito.*;
 

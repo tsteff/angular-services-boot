@@ -1,4 +1,4 @@
-package com.timsteff.angularservices.domain;
+package com.tsteff.angularservices.domain;
 
 public class Todo {
     private String name;

@@ -1,11 +1,10 @@
-package com.timsteff.angularservices.repository;
+package com.tsteff.angularservices.repository;
 
+import com.tsteff.angularservices.domain.Todo;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
-
-import com.timsteff.angularservices.domain.Todo;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;

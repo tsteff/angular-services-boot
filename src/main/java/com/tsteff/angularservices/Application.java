@@ -1,4 +1,4 @@
-package com.timsteff.angularservices;
+package com.tsteff.angularservices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

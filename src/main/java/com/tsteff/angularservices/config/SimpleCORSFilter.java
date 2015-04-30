@@ -1,4 +1,4 @@
-package com.timsteff.angularservices.config;
+package com.tsteff.angularservices.config;
 
 import java.io.IOException;
 import javax.servlet.Filter;

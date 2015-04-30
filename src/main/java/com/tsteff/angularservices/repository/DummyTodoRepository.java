@@ -1,9 +1,9 @@
-package com.timsteff.angularservices.repository;
+package com.tsteff.angularservices.repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.timsteff.angularservices.domain.Todo;
+import com.tsteff.angularservices.domain.Todo;
 
 public class DummyTodoRepository implements TodoRepository{
 

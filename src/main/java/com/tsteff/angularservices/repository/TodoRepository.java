@@ -1,6 +1,6 @@
-package com.timsteff.angularservices.repository;
+package com.tsteff.angularservices.repository;
 
-import com.timsteff.angularservices.domain.Todo;
+import com.tsteff.angularservices.domain.Todo;
 
 import java.util.List;
 
