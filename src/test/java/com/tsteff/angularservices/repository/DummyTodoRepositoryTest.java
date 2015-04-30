@@ -19,17 +19,32 @@ public class DummyTodoRepositoryTest {
     }
 
     @Test
+    public void shouldRetrieveTodo() {
+        // given
+        String title = "Voltron";
+        dummyTodoRepository.save(new Todo(title, "Visit"));
+
+        // when
+        Todo todo = dummyTodoRepository.find(title);
+
+        // then
+        assertThat(todo.getDescription(), is("Visit"));
+    }
+
+    @Test
     public void shouldAddAndReturnAllTodos() {
         // given
-        dummyTodoRepository.save(new Todo("Visit Voltron"));
-        dummyTodoRepository.save(new Todo("Say Good Bye to the Astro Boy"));
+        dummyTodoRepository.save(new Todo("Voltron", "Visit"));
+        dummyTodoRepository.save(new Todo("Astro Boy", "Say Good Bye"));
 
         // when
         List<Todo> todos = dummyTodoRepository.getAll();
 
         // then
-        assertThat(todos.get(0).getName(), is("Visit Voltron"));
-        assertThat(todos.get(1).getName(), is("Say Good Bye to the Astro Boy"));
+        assertThat(todos.get(0).getTitle(), is("Voltron"));
+        assertThat(todos.get(0).getDescription(), is("Visit"));
+        assertThat(todos.get(1).getTitle(), is("Astro Boy"));
+        assertThat(todos.get(1).getDescription(), is("Say Good Bye"));
         assertThat(todos.size(), is(2));
     }
 }
