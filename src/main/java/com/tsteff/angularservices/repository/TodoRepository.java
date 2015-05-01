@@ -8,4 +8,5 @@ public interface TodoRepository {
     List<Todo> getAll();
     void save(Todo todo);
     Todo find(String title);
+    void delete(String voltron);
 }

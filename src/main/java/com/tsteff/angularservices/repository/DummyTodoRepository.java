@@ -25,4 +25,9 @@ public class DummyTodoRepository implements TodoRepository{
     public Todo find(String title) {
         return todoList.get(title);
     }
+
+    @Override
+    public void delete(String title) {
+        todoList.remove(title);
+    }
 }

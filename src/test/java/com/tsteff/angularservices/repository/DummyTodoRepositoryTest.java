@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DummyTodoRepositoryTest {
@@ -46,5 +47,19 @@ public class DummyTodoRepositoryTest {
         assertThat(todos.get(1).getTitle(), is("Astro Boy"));
         assertThat(todos.get(1).getDescription(), is("Say Good Bye"));
         assertThat(todos.size(), is(2));
+    }
+
+    @Test
+    public void shouldDeleteATodo() {
+        // given
+        dummyTodoRepository.save(new Todo("He Man", "via Grayskull"));
+        dummyTodoRepository.save(new Todo("Voltron", "Visit"));
+        dummyTodoRepository.save(new Todo("Astro Boy", "Say Good Bye"));
+
+        // when
+        dummyTodoRepository.delete("Voltron");
+
+        // then
+        assertThat(dummyTodoRepository.find("Voltron"), is(nullValue()));
     }
 }
