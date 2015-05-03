@@ -1,12 +1,27 @@
 package com.tsteff.angularservices.domain;
 
 public class Todo {
+    private Integer id;
     private String title;
     private String description;
+
+    public Todo (Integer id, String title, String description) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+    }
 
     public Todo (String title, String description) {
         this.title = title;
         this.description = description;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -23,5 +38,9 @@ public class Todo {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Todo() {
+
     }
 }
